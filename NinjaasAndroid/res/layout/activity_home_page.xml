@@ -1,0 +1,149 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ninjaas.productsintro.HomePage" >
+
+    <ImageView
+        android:id="@+id/toplogo"
+        android:layout_width="@dimen/toplogo_width"
+        android:layout_height="@dimen/toplogo_height"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@null"
+        android:src="@drawable/squarelogo" />
+
+    <LinearLayout
+        android:id="@+id/topmenubar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topmenu_bar"
+        android:layout_below="@+id/toplogo"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/product"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/productimage"
+                android:layout_width="@dimen/topmenu_bar_icon"
+                android:layout_height="@dimen/topmenu_bar_icon"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@null"
+                android:src="@drawable/products" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/products" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/team"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/teamimage"
+                android:layout_width="@dimen/topmenu_bar_icon"
+                android:layout_height="@dimen/topmenu_bar_icon"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@null"
+                android:src="@drawable/team" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/team" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/about"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/aboutimage"
+                android:layout_width="@dimen/topmenu_bar_icon"
+                android:layout_height="@dimen/topmenu_bar_icon"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@null"
+                android:src="@drawable/about_us" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/about" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contact"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/contactimage"
+                android:layout_width="@dimen/topmenu_bar_icon"
+                android:layout_height="@dimen/topmenu_bar_icon"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@null"
+                android:src="@drawable/contact" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/contact" />
+        </LinearLayout>
+    </LinearLayout>
+	<RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topmenubar">
+	        
+	    <WebView
+	        android:id="@+id/webview"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent" />
+	    
+	    <RelativeLayout
+        android:id="@+id/searching_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <ProgressBar
+            android:id="@+id/searching_icon"
+            style="@android:style/Widget.ProgressBar.Large.Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searching_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:text="Loading"
+            android:textColor="@android:color/background_dark" />
+    </RelativeLayout>
+	    
+	</RelativeLayout>
+
+</RelativeLayout>
